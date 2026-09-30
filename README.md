@@ -28,11 +28,6 @@ erDiagram
   USERS { int user_id PK }
 ```
 
-## Where the marks are
-- **Database (5):** `sql/schema.sql` - 3NF, PK/FK, UNIQUE, CHECK, ENUM, ON DELETE CASCADE, sample data.
-- **GUI (5):** `*Panel.java`, `LoginFrame`, `MainFrame` - role-based tabs, GridBagLayout forms, colour-coded status, validation dialogs.
-- **JDBC (5):** `DBConnection` + `*DAO` - PreparedStatement everywhere, try-with-resources, transaction with commit/rollback in `AllocationDAO`, `SELECT ... FOR UPDATE` row lock.
-
 ## Demo flow
 Login (admin) > Flights: add a flight > Gate Allocation: pick it, Find Free Gates, Allocate > show new row in Workbench
 (`SELECT * FROM gate_allocations;`) > try a conflicting allocation (error) > Release > Runway/ATC: assign a slot, try one within 5 min (error) > Reports.
