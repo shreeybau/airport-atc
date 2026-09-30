@@ -1,0 +1,7 @@
+   target/
+   out/
+   bin/
+   *.jar
+   *.class
+   .vscode/
+   run.bat
